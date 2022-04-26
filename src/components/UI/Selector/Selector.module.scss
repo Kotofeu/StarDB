@@ -1,0 +1,21 @@
+.MySelection {
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    
+    color: #000000;
+    & option {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        color: #000000;
+    }
+      
+}

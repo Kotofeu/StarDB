@@ -1,0 +1,325 @@
+@media (min-width: 480.98px) {
+    .header {
+        &__nav-list {
+            display: flex;
+            position: relative;
+            z-index: 1;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            flex-direction: row;
+            transform: translateX(0%);
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        &__nav-item {
+            padding-left: 40px;
+        }
+
+        &__nav-link {
+            font-size: 20px;
+        }
+    }
+    .home {
+        &__text {
+            font-size: 26px;
+            margin-top: 30px;
+            text-shadow: 1px 1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, -1px -1px 2px #000;
+        }
+
+        &__inner {
+            padding: 160px 0;
+        }
+    }
+    .starships {
+        &__inner {
+            padding-top: 150px;
+            padding-bottom: 120px;
+        }
+
+        &__grid {
+            padding-top: 85px;
+            gap: 30px;
+
+        }
+
+        &__item {
+            width: calc(50% - 15px);
+
+        }
+    }
+    .starship {
+        padding: 140px 0px 80px;
+        &__text{
+            font-size: 25px;
+            padding-top: 40px;
+        }
+    }
+    .planets {
+
+        &__name{
+            font-size: 15px;
+        }
+        &__value{
+            font-size: 17px;
+        }
+    }
+}
+
+@media (min-width: 576.98px) {
+    .header {
+        &__inner {
+            padding-top: 30px;
+        }
+
+        &__logo-link {
+            font-size: 35px;
+        }
+
+        &__nav-link {
+            font-size: 22px;
+        }
+
+
+    }
+    .home {
+        &__text {
+            font-size: 30px;
+            margin-top: 45px;
+
+        }
+
+        &__inner {
+            padding: 180px 0;
+        }
+    }
+    .starships {
+        &__inner {
+            padding-top: 190px;
+            padding-bottom: 180px;
+        }
+
+        &__selector {
+            padding-top: 25px;
+        }
+
+        &__grid {
+            padding-top: 77px;
+            gap: 30px;
+
+        }
+        &__item {
+            width: calc(50% - 15px);
+        }
+        &__content {
+            padding: 9px 0;
+        }
+    }
+    .starship {
+        padding: 170px 0px 110px;
+        &__info{
+            padding-top: 60px;
+        }
+        &__text{
+            font-size: 30px;
+            padding-top: 60px;
+        }
+    }
+    .planets {
+        &__inner{
+            padding-top: 160px;
+        }
+        &__grid{
+            padding-top: 36px;
+        }
+        &__item{
+            width: calc(50% - 10px);
+        }
+        &__name{
+            font-size: 10px;
+        }
+        &__value{
+            font-size: 13px;
+        }
+    }
+}
+
+@media (min-width: 768.98px) {
+    .header {
+        &__inner {
+            padding-top: 40px;
+        }
+
+        &__logo-link {
+            font-size: 40px;
+        }
+
+        &__nav-link {
+            font-size: 24px;
+        }
+    }
+    .home {
+        &__text {
+            font-size: 36px;
+            margin-top: 60px;
+        }
+
+        &__inner {
+            padding: 230px 0;
+        }
+    }
+    .starships {
+        &__inner {
+            padding-top: 230px;
+            padding-bottom: 220px;
+        }
+
+        &__selector {
+            padding-top: 30px;
+        }
+
+        &__grid {
+            padding-top: 66px;
+            gap: 40px;
+        }
+        &__item {
+            width: calc(50% - 20px);
+        }
+
+        &__content {
+            padding: 15px 0;
+        }
+
+        &__name {
+            font-size: 24px;
+        }
+
+        &__value {
+            font-size: 28px;
+        }
+    }
+    .starship {
+        padding: 230px 0px 151px;
+        &__info{
+            flex-direction: row;
+        }
+        &__img-box{
+            max-width: 50%;
+            margin-right: 20px;
+            & img{
+                min-height: 300px;
+            }
+        }
+        &__content{
+            max-width: 50%;
+        }
+        &__property {
+            flex-direction: row;
+            align-items: center;
+            &:first-child {
+                padding-top: 0px;
+            }
+        }
+        &__name {
+            padding-bottom: 0px;
+        }
+        &__value {
+            text-align: right;
+        }
+        &__name {
+            font-size: 22px;
+        }
+        &__value {
+            font-size: 30px;
+        }
+        &__text{
+            font-size: 32px;
+            padding-top: 70px;
+        }
+    }
+    .planets {
+        &__inner{
+            padding-top: 190px;
+        }
+        &__content{
+            padding: 40px 16px;
+        }
+        &__grid{
+            gap: 32px;
+            padding-top: 46px;
+        }
+        &__item{
+            width: calc(50% - 17px);
+        }
+        &__name{
+            font-size: 13px;
+        }
+        &__value{
+            font-size: 16px;
+        }
+    }
+
+}
+
+@media (min-width: 992.98px) {
+    .starship {
+        &__name {
+            font-size: 24px;
+        }
+        &__value {
+            font-size: 34px;
+        }
+        &__img-box{
+            margin-right: 47px;
+        }
+        &__text{
+            font-size: 36px;
+            padding-top: 80px;
+        }
+    }
+    .starships {
+        &__grid {
+            padding-top: 66px;
+            gap: 60px;
+        }
+        &__item {
+            width: calc(33.33% - 40px);
+        }
+
+    }
+    .planets{
+        &__inner{
+            padding-top: 230px;
+            padding-bottom: 102px;
+        }
+        &__grid{
+            padding-top: 66px;
+        }
+        &__content{
+            padding: 60px 16px;
+        }
+        &__name{
+            font-size: 20px;
+        }
+        &__value{
+            font-size: 24px;
+        }
+        &__item-img-box{
+            margin: 16px;
+        }
+    }
+}
+@media (min-width: 1280px) {
+
+    .starship {
+        &__name {
+            font-size: 28px;
+        }
+        &__value {
+            font-size: 40px;
+        }
+    }
+}

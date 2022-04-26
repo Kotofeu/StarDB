@@ -1,0 +1,22 @@
+.MyTitle {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    color: #E2F063;
+    @media (min-width: 480.98px) {
+        font-size: 50px;
+        line-height: 115%;
+    }
+    
+    @media (min-width: 576.98px) {
+        font-size: 60px;
+        line-height: 110%;
+    }
+    
+    @media (min-width: 768.98px) {
+        font-size: 70px;
+        line-height: 100%;
+    }
+}

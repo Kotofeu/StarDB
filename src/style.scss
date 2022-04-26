@@ -1,0 +1,420 @@
+@import 'fonts';
+@import 'reset';
+
+.container {
+    margin: 0 auto;
+    max-width: 1320px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+body {
+    background-color: #1E1E1E;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.error {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 400;
+        font-size: 40px;
+    }
+
+    &__home {
+        font-weight: 500;
+        font-size: 30px;
+        color: #E2F063;
+    }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    &__inner {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__logo-link {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 100%;
+        &.header__link--active{
+            pointer-events: none;
+        }
+    }
+
+    &__nav {
+        display: flex;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: -1;
+        align-items: center;
+        justify-content: center;
+        background-color: #1E1E1E;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: transform .5s ease-in-out;
+        transform: translateX(120%);
+
+        &--active {
+            transform: translateX(0%);
+        }
+    }
+
+    &__nav-item {
+        padding-left: 0px;
+    }
+
+    &__nav-link {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        font-size: 60px;
+        position: relative;
+        transition: color .2s linear;
+
+        &::after {
+            content: "";
+            transition: opacity .2s linear;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: #E2F063;
+            opacity: 0;
+        }
+
+        &:hover {
+            color: #E2F063;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+        &.header__link--active{
+            pointer-events: none;
+            color: #E2F063;
+
+            &::after{
+                opacity: 1;
+
+            }
+        }
+    }
+
+    &__burger {
+        position: relative;
+        z-index: 10;
+        width: 43px;
+        height: 30px;
+        cursor: pointer;
+        display: block;
+
+        & span {
+            display: block;
+            background-color: #FFFFFF;
+            height: 2px;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 8px;
+            transition: transform .5s ease-in-out;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &--close {
+            & span {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: rotate(45deg);
+
+                &:nth-child(even) {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.home {
+    &__inner {
+        padding: 120px 0;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 140%;
+        position: relative;
+        margin-top: 20px;
+        max-width: 1200px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #8B39B2 0%, #E2F063 100%);
+            opacity: 0.6;
+            filter: blur(150px);
+        }
+    }
+}
+
+.starships {
+    &__inner {
+        padding-top: 120px;
+        padding-bottom: 90px;
+    }
+
+    &__selector {
+        padding-top: 20px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__sort-title {
+        font-size: 22px;
+        line-height: 26px;
+        padding-right: 16px;
+        font-weight: 400;
+    }
+
+    &__grid {
+        padding-top: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+    }
+
+    &__item {
+        padding: 20px;
+        cursor: pointer;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        width: 100%;
+        transition: transform .2s linear;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+
+    &__item-img-box {
+        position: relative;
+        padding-top: 56%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        min-height: 150px;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+    }
+
+    &__content {
+        padding: 0;
+    }
+
+    &__property {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #1E1E1E;
+
+        &:last-child {
+            padding-bottom: 0px;
+        }
+    }
+
+    &__name {
+        font-size: 20px;
+        line-height: 140%;
+        padding-right: 10px;
+    }
+
+    &__value {
+        font-weight: 500;
+        font-size: 22px;
+
+        line-height: 140%;
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.starship {
+    padding: 120px 0px 58px;
+    &__info {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img-box {
+        max-width: 100%;
+        width: 100%;
+        & img{
+            min-height: 228px;
+        }
+    }
+
+    &__content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &__property {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    &__name {
+        font-size: 24px;
+        line-height: 140%;
+        padding-bottom: 12px;
+        padding-right: 30px;
+    }
+
+    &__value {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__text {
+        padding-top: 20px;
+        font-size: 20px;
+        line-height: 140%;
+    }
+}
+
+.planets {
+    &__inner {
+        padding-top: 120px;
+        padding-bottom: 87px;
+    }
+    &__grid {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+    }
+
+    &__item {
+        cursor: pointer;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        width: 100%;
+        transition: transform .2s linear;
+        display: flex;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__item-img-box {
+        position: relative;
+        padding-right: 40%;
+        overflow: hidden;
+        margin: 9px;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        padding: 31px 9px;
+        max-width: 55%;
+    }
+
+    &__property {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #1E1E1E;
+
+        &:last-child {
+            padding-bottom: 0px;
+        }
+    }
+
+    &__name {
+        font-size: 10px;
+        line-height: 140%;
+        padding-right: 10px;
+    }
+
+    &__value {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 140%;
+        text-align: right;
+        color: #1E1E1E;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@import 'media';
