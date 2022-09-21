@@ -56,9 +56,6 @@ body {
         font-weight: 600;
         font-size: 30px;
         line-height: 100%;
-        &.header__link--active{
-            pointer-events: none;
-        }
     }
 
     &__nav {
@@ -99,7 +96,7 @@ body {
         transition: color .2s linear;
 
         &::after {
-            content: "";
+            content: '';
             transition: opacity .2s linear;
             position: absolute;
             bottom: 0px;
@@ -117,13 +114,11 @@ body {
                 opacity: 1;
             }
         }
-        &.header__link--active{
-            pointer-events: none;
+        &.active{
             color: #E2F063;
 
             &::after{
                 opacity: 1;
-
             }
         }
     }
@@ -179,7 +174,7 @@ body {
         max-width: 1200px;
 
         &::after {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             left: 0;

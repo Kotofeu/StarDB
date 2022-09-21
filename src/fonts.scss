@@ -1,28 +1,28 @@
 @font-face {
-    font-family: "Gilroy";
-    src: local("GoldmanBold"),
-        url("./fonts/Gilroy-Medium.ttf") format("truetype");
+    font-family: 'Gilroy';
+    src: local('GoldmanBold'),
+        url('./fonts/Gilroy-Medium.ttf') format('truetype');
     font-style: normal;
     font-weight: 500;
 }
 @font-face {
-    font-family: "Gilroy";
-    src: local("GoldmanBold"),
-        url("./fonts/Gilroy-Regular.ttf") format("truetype");
+    font-family: 'Gilroy';
+    src: local('GoldmanBold'),
+        url('./fonts/Gilroy-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
-    font-family: "Open Sans";
-    src: local("GoldmanBold"),
-        url("./fonts/OpenSans-Regular.ttf") format("truetype");
+    font-family: 'Open Sans';
+    src: local('GoldmanBold'),
+        url('./fonts/OpenSans-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
-    font-family: "Open Sans";
-    src: local("GoldmanBold"),
-        url("./fonts/OpenSans-SemiBold.ttf") format("truetype");
+    font-family: 'Open Sans';
+    src: local('GoldmanBold'),
+        url('./fonts/OpenSans-SemiBold.ttf') format('truetype');
     font-style: normal;
     font-weight: 600;
 }

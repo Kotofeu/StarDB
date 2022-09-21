@@ -9,7 +9,7 @@ export default function Starship() {
   const params = useParams();
   const [starship, setStarship] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [created, setCreated] = useState("");
+  const [created, setCreated] = useState('');
   useEffect(() => {
     fetchStarship()
   }, [])
@@ -35,7 +35,7 @@ export default function Starship() {
               <div className='starship__img-box'>
                 <Image src={`https://starwars-visualguide.com/assets/img/starships/${params.id}.jpg`}></Image>
               </div>
-              <ul className="starship__content">
+              <ul className='starship__content'>
                 <li className='starship__property'>
                   <p className='starship__name'>Model:</p>
                   <p className='starship__value'>{starship.model}</p>

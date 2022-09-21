@@ -26,7 +26,7 @@ export default function Planets() {
     <section className='planets'>
       <div className='container'>
         <div className='planets__inner'>
-        <Title children="Planets" />
+        <Title children='Planets' />
 
           {isLoading
             ?<Loader></Loader>

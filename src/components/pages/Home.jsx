@@ -6,7 +6,7 @@ export default function Home() {
     <section className='home'>
       <div className='container'>
         <div className='home__inner'>
-          <Title children="Welcome to StarDB" />
+          <Title children='Welcome to StarDB' />
           <p className='home__text'>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             Aenean commodo ligula eget dolor.

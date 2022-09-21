@@ -8,7 +8,7 @@ import Loader from '../UI/Loader/Loader'
 
 export default function StarshipsPage() {
     const [starships, setStarships] = useState([]);
-    const [selectedSort, setSelectedSort] = useState("");
+    const [selectedSort, setSelectedSort] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         fetchStarship()
@@ -27,7 +27,7 @@ export default function StarshipsPage() {
     }
     const sortList = (sort) => {
         setSelectedSort(sort);
-        if (sort === "name") {
+        if (sort === 'name') {
             setStarships([...starships].sort((a, b) => a[sort].localeCompare(b[sort])))
         }
         else {
@@ -38,16 +38,16 @@ export default function StarshipsPage() {
         <section className='starships'>
             <div className='container'>
                 <div className='starships__inner'>
-                    <Title children="Starships" />
+                    <Title children='Starships' />
                     <div className='starships__selector'>
                         <h6 className='starships__sort-title'>Sort by:</h6>
                         <Selector
                             value={selectedSort}
                             onChange={sort => sortList(sort)}
-                            defaultValue=""
+                            defaultValue=''
                             options={[
-                                { value: "name", name: 'Name' },
-                                { value: "cost_in_credits", name: 'Cost' }
+                                { value: 'name', name: 'Name' },
+                                { value: 'cost_in_credits', name: 'Cost' }
                             ]}
                         />
                     </div>

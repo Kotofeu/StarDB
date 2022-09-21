@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Header({ title, props }) {
     const [burgerOpen, setBurgerOpen] = useState(false)
-    const [activeIndex, setActiveIndex] = useState(null)
-    const LinkActive = (index) => {
-        setBurgerOpen(false)
-        setActiveIndex(index)
-    };
     return (
         <header className='header'>
             <div className='container'>
                 <div className='header__inner'>
                     <h3 className='header__logo'>
-                        <Link className='header__logo-link header__link' to='/' onClick={() => LinkActive(0)}>{title}</Link>
+                        <Link className='header__logo-link'
+                            to='/'
+                            onClick={() => setBurgerOpen(false)}>
+                            {title}
+                        </Link>
                     </h3>
                     <nav className='header__nav'>
                         <ul className={`header__nav-list 
@@ -23,16 +22,11 @@ export default function Header({ title, props }) {
                             }`}>
                             {props.map((item, index) =>
                                 <li className='header__nav-item' key={item.name}>
-                                    <Link className={
-                                        `header__nav-link header__link 
-                                        ${activeIndex === index + 1
-                                            ? 'header__link--active'
-                                            : ''
-                                        }`}
+                                    <NavLink className='header__nav-link'
                                         to={item.link}
-                                        onClick={() => LinkActive(index + 1)}>
+                                        onClick={() => setBurgerOpen(false)}>
                                         {item.name}
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             )}
                         </ul>
