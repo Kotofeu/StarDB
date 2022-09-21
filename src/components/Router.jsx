@@ -10,7 +10,12 @@ import Starship from './pages/Starship';
 export default function Router() {
     return (
         <BrowserRouter>
-            <Header title="StarDB" home="/" props={[{ name: "Starships", link: "/starships" }, { name: "Planets", link: "/planets" }]}></Header>
+            <Header title="StarDB" 
+             props={[
+                { name: "Starships", link: "/starships"}, 
+                { name: "Planets", link: "/planets"}
+            ]}
+             />
             <Routes>
                 <Route exact path='/starships' element={<Starships />} />
                 <Route exact path='/starships/:id' element={<Starship />} />

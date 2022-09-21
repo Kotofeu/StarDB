@@ -12,13 +12,13 @@ export default function StarshipsPage() {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         fetchStarship()
-
     }, [])
     async function fetchStarship() {
         try {
             setIsLoading(true)
             const response = await Servive.getAllStarships();
-            setStarships(response.data.results)
+            setStarships([...response.data.results].sort((a, b) => a['name'].localeCompare(b['name'])))
+            setSelectedSort('name');
         } catch (e) {
 
         } finally {
@@ -27,13 +27,11 @@ export default function StarshipsPage() {
     }
     const sortList = (sort) => {
         setSelectedSort(sort);
-        if (sort == "name") {
+        if (sort === "name") {
             setStarships([...starships].sort((a, b) => a[sort].localeCompare(b[sort])))
-
         }
         else {
             setStarships([...starships].sort((a, b) => b[sort].localeCompare(a[sort], undefined, { numeric: true })))
-
         }
     }
     return (
@@ -55,7 +53,7 @@ export default function StarshipsPage() {
                     </div>
                     {isLoading
                         ? <Loader></Loader>
-                        :  <StarshipsList starships={starships}></StarshipsList>
+                        : <StarshipsList starships={starships}></StarshipsList>
                     }
                 </div>
             </div>
